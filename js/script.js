@@ -188,54 +188,54 @@ $(document).ready(function () {
     // window.setInterval(function(){$('button').trigger('click');}, 1000);
 
 
-    $.each($(".bubbles-right"), function () {
-        var bubblecount = ($(this).width() / 100) * 5;
-        for (var i = 0; i <= bubblecount; i++) {
-            var size = ((Math.random() * 40 + 40) / 4);
-            $(this).append('<span class="particle-r" style="top:' + (Math.random() * 30 + 65) + '%; left:' + (Math.random() * 50 + 20) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
-        }
-    });
-    $.each($(".bubbles-left"), function () {
-        var bubblecount = ($(this).width() / 100) * 5;
-        for (var i = 0; i <= bubblecount; i++) {
-            var size = ((Math.random() * 40 + 40) / 4);
-            $(this).append('<span class="particle-l" style="top:' + (Math.random() * 30 + 65) + '%; left:' + (Math.random() * 50 + 20) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
-        }
-    });
-    $.each($(".board-bubbles-right"), function () {
-        var bubblecount = 5;
-        for (var i = 0; i <= bubblecount; i++) {
-            var size = ((Math.random() * 40 + 40) / 2);
-            $(this).append('<span class="particle-ll" style="top:' + (Math.random() * 30 + 70) + '%; left:' + (Math.random() * 30 - 40) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
-        }
-    });
-    $.each($(".board-bubbles-left"), function () {
-        var bubblecount = ($(this).width() / 100) / 2;
-        for (var i = 0; i <= bubblecount; i++) {
-            var size = ((Math.random() * 40 + 40) / 2);
-            $(this).append('<span class="particle-rr" style="top:' + (Math.random() * 30 + 70) + '%; left:' + (Math.random() * 30 + 100) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
-        }
-    });
-    var bubblecount, topPos, randomMax, posName, maxLeft;
-    if ($(".desktop").css("display") == "none") {
-        bubblecount = ($(".section-1").width() / 10);
-        topPos = 12;
-        randomMax = 88;
-        maxLeft = 80;
-        posName = "vh";
-    } else {
-        bubblecount = ($(".section-1").width() / 100) / 1.3;
-        topPos = 6;
-        randomMax = 40;
-        maxLeft = 100;
-        posName = "vw";
-    }
-    for (var i = 0; i <= bubblecount; i++) {
-        var sizeBlue = ((Math.random() * randomMax + 40) / 2);
-        var sizeGreen = ((Math.random() * randomMax + 40) / 2);
-        $(".section-1").append('<span class="particle-blue" style="top:' + (Math.random() * randomMax + topPos) + posName + '; left:' + (Math.random() * maxLeft) + '%;width:' + sizeBlue + 'px; height:' + sizeBlue + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
-        $(".section-1").append('<span class="particle-green" style="top:' + (Math.random() * randomMax + topPos) + posName + '; left:' + (Math.random() * maxLeft) + '%;width:' + sizeGreen + 'px; height:' + sizeGreen + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
-    }
+    // $.each($(".bubbles-right"), function () {
+    //     var bubblecount = ($(this).width() / 100) * 5;
+    //     for (var i = 0; i <= bubblecount; i++) {
+    //         var size = ((Math.random() * 40 + 40) / 4);
+    //         $(this).append('<span class="particle-r" style="top:' + (Math.random() * 30 + 65) + '%; left:' + (Math.random() * 50 + 20) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
+    //     }
+    // });
+    // $.each($(".bubbles-left"), function () {
+    //     var bubblecount = ($(this).width() / 100) * 5;
+    //     for (var i = 0; i <= bubblecount; i++) {
+    //         var size = ((Math.random() * 40 + 40) / 4);
+    //         $(this).append('<span class="particle-l" style="top:' + (Math.random() * 30 + 65) + '%; left:' + (Math.random() * 50 + 20) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
+    //     }
+    // });
+    // $.each($(".board-bubbles-right"), function () {
+    //     var bubblecount = 5;
+    //     for (var i = 0; i <= bubblecount; i++) {
+    //         var size = ((Math.random() * 40 + 40) / 2);
+    //         $(this).append('<span class="particle-ll" style="top:' + (Math.random() * 30 + 70) + '%; left:' + (Math.random() * 30 - 40) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
+    //     }
+    // });
+    // $.each($(".board-bubbles-left"), function () {
+    //     var bubblecount = ($(this).width() / 100) / 2;
+    //     for (var i = 0; i <= bubblecount; i++) {
+    //         var size = ((Math.random() * 40 + 40) / 2);
+    //         $(this).append('<span class="particle-rr" style="top:' + (Math.random() * 30 + 70) + '%; left:' + (Math.random() * 30 + 100) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
+    //     }
+    // });
+    // var bubblecount, topPos, randomMax, posName, maxLeft;
+    // if ($(".desktop").css("display") == "none") {
+    //     bubblecount = ($(".section-1").width() / 10);
+    //     topPos = 12;
+    //     randomMax = 88;
+    //     maxLeft = 80;
+    //     posName = "vh";
+    // } else {
+    //     bubblecount = ($(".section-1").width() / 100) / 1.3;
+    //     topPos = 6;
+    //     randomMax = 40;
+    //     maxLeft = 100;
+    //     posName = "vw";
+    // }
+    // for (var i = 0; i <= bubblecount; i++) {
+    //     var sizeBlue = ((Math.random() * randomMax + 40) / 2);
+    //     var sizeGreen = ((Math.random() * randomMax + 40) / 2);
+    //     $(".section-1").append('<span class="particle-blue" style="top:' + (Math.random() * randomMax + topPos) + posName + '; left:' + (Math.random() * maxLeft) + '%;width:' + sizeBlue + 'px; height:' + sizeBlue + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
+    //     $(".section-1").append('<span class="particle-green" style="top:' + (Math.random() * randomMax + topPos) + posName + '; left:' + (Math.random() * maxLeft) + '%;width:' + sizeGreen + 'px; height:' + sizeGreen + 'px;animation-delay: ' + ((Math.random() * 30) / 10) + 's;"></span>');
+    // }
 
 // Spoilers
 
