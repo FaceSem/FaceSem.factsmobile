@@ -253,12 +253,13 @@ $(document).ready(function () {
         });
     });
 
+
 // Spoilers fact 
 
     var spoilers = $(".spoiler2");
     spoilers.each(function () {
         var spoiler = $(this);
-        spoiler.find(".spoiler-expand-btn").click(function () {
+        spoiler.click(function () {
             if ($(this).hasClass("spoiler-open-btn")) {
                 $(this).removeClass("spoiler-open-btn").addClass("spoiler-close-btn");
                 spoiler.find(".spoiler-body").slideUp(1000);
